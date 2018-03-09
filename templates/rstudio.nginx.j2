@@ -4,7 +4,7 @@
 # {{ ansible_managed }}
 
 server {
-  listen {{ vars['ansible_' ~ tinc_prefix ~ tinc_name]['ipv4']['address'] }}:80;
+  listen {{ vpn_ip }}:80;
 
   server_name {{ rstudio_host }};
 
