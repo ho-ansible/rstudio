@@ -4,7 +4,9 @@
 # {{ ansible_managed }}
 
 server {
-  listen {{ vpn_ip }}:80;
+{% for listen in rstudio_listen %}
+  listen {{ listen }};
+{% endfor %}
 
   server_name {{ rstudio_host }};
 
