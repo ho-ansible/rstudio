@@ -31,26 +31,11 @@
     - rsession.conf
   notify: restart rstudio
 
-- name: rstudio | nginx site
-  tags:
-    - site
-  template:
-    src: "{{ item }}.nginx.j2"
-    dest: /etc/nginx/sites-available/{{ item }}
-  with_items:
-    - rstudio
-  notify: restart rstudio
-
-- name: rstudio | enable nginx site
-  tags:
-    - site
-  file:
-    src: "/etc/nginx/sites-available/{{ item }}"
-    dest: "/etc/nginx/sites-enabled/{{ item }}"
-    state: link
-  with_items:
-    - rstudio
-  notify: restart rstudio
+- name: rstudio | nginx config
+  include_role:
+    name: nginx
+    tasks_from: site.yml
+  with_items: rstudio
 
 - name: rstudio | service
   tags:
