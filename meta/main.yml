@@ -1,4 +1,23 @@
 ---
+galaxy_info:
+  author: Sean Ho
+  description: RStudio web-based IDE for R
+  company: Anchorlytics Consulting
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  platforms:
+   - name: Debian
+     versions:
+     - stable
+     - 9
+
+  galaxy_tags:
+    - R
+    - statistics
+    - math
+
 dependencies:
   - role: R
   - role: nginx
