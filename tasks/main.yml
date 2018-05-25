@@ -32,10 +32,11 @@
   notify: restart rstudio
 
 - name: rstudio | nginx config
+  vars:
+    site: rstudio
   include_role:
     name: nginx
     tasks_from: site.yml
-  loop: [ rstudio ]
 
 - name: rstudio | service
   tags:
