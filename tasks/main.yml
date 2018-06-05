@@ -26,16 +26,17 @@
   template:
     src: "{{ item }}.j2"
     dest: "/etc/rstudio/{{ item }}"
-  with_items:
+  loop:
     - rserver.conf
     - rsession.conf
   notify: restart rstudio
 
 - name: rstudio | nginx config
+  vars:
+    site: rstudio
   include_role:
     name: nginx
     tasks_from: site.yml
-  with_items: rstudio
 
 - name: rstudio | service
   tags:
