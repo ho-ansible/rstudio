@@ -1,2 +1,3 @@
 ---
 rstudio_current: "https://download2.rstudio.org/current.ver"
+rstudio_url: "https://download2.rstudio.org/rstudio-server-{{ rstudio_ver }}-amd64.deb"
