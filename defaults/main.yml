@@ -8,4 +8,4 @@ rstudio_localport: 8787
 rstudio_listen:
   - "localhost:80"
 
-rstudio_url: "https://download2.rstudio.org/rstudio-server-{{ ansible_distribution_release }}-{{ rstudio_ver }}-amd64.deb"
+rstudio_url: "https://download2.rstudio.org/rstudio-server-{{ rstudio_ver }}-amd64.deb"
