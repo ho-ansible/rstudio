@@ -2,7 +2,10 @@
 Installs the RStudio Server web-based IDE for
 the R statistical language.
 
-# Role variables
+## Requirements
+Only tested on Debian stable, for now.
+
+## Role variables
 + `rstudio_ver` (default: auto-updates to latest): which version of 
   RStudio Server to install
 + `rstudio_user` (default: rstudio): unprivileged user to run server
@@ -16,3 +19,20 @@ the R statistical language.
   directives; this is the public access.
 + `rstudio_url` (default: rstudio.com repository): where to fetch 
   .deb package from
+
+## Dependencies
+None.
+
+## Example Playbook
+
+```
+- hosts: rstudio
+  roles:
+    - { role: ho-ansible.rstudio }
+```
+
+## License
+MIT
+
+## Author Information
+Sean Ho, https://github.com/ho-ansible/
