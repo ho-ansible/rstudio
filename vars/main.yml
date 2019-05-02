@@ -1,3 +1,5 @@
 ---
 rstudio_current: "https://download2.rstudio.org/current.ver"
-rstudio_url: "https://download2.rstudio.org/rstudio-server-{{ rstudio_ver }}-amd64.deb"
+rstudio_distro: "{{ ansible_distribution | lower }}{{ ansible_distribution_version }}"
+# e.g., https://download2.rstudio.org/server/debian9/x86_64/rstudio-server-1.2.1335-amd64.deb
+rstudio_url: "https://download2.rstudio.org/server/{{ rstudio_distro }}/{{ ansible_architecture }}/rstudio-server-{{ rstudio_ver }}-amd64.deb"

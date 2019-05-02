@@ -1,5 +1,5 @@
 ---
-rstudio_ver: "{{ lookup('url', rstudio_current) }}"
+rstudio_ver: "{{ lookup('url', rstudio_current) | regex_replace('-.*$') }}"
 rstudio_user: rstudio
 rstudio_passwd: ''
 rstudio_group: rstudio_users
