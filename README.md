@@ -2,6 +2,10 @@
 RStudio Server web-based IDE for
 the R statistical language.
 
+## DEPRECATED
+Installation of this app has been moved to kubernetes,
+so this ansible role is no longer maintained.
+
 ## Requirements
 Only tested on Debian stable, for now.
 
