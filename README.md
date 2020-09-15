@@ -7,7 +7,7 @@ Installation of this app has been moved to kubernetes,
 so this ansible role is no longer maintained.
 
 ## Requirements
-Only tested on Debian stable, for now.
+Only tested on Debian buster.
 
 ## Role variables
 + `rstudio_ver` (default: auto-updates to latest): which version of 
@@ -24,16 +24,12 @@ Only tested on Debian stable, for now.
 + `rstudio_url` (default: rstudio.com repository): where to fetch 
   .deb package from
 
+## Playbooks
++ `main.yml`: apply role
+
 ## Dependencies
-None.
-
-## Example Playbook
-
-```
-- hosts: rstudio
-  roles:
-    - { role: ho-ansible.rstudio }
-```
++ [ho-ansible.nginx](https://github.com/ho-ansible/nginx)
++ [ho-ansible.R](https://github.com/ho-ansible/R)
 
 ## License
 MIT

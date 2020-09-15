@@ -8,17 +8,16 @@ galaxy_info:
   min_ansible_version: 1.2
 
   platforms:
-   - name: Debian
-     versions:
-     - stable
-     - 9
+  - name: Debian
+    versions:
+    - 10
 
   galaxy_tags:
-    - R
-    - statistics
-    - math
+  - R
+  - statistics
+  - math
 
 dependencies:
-  - role: R
-  - role: nginx
+- role: R
+- role: nginx
 

@@ -1,0 +1,11 @@
+#! /usr/bin/env ansible-playbook
+# Configure RStudio web IDE for statistical software
+# Replace 'rstudio' with your own inventory group
+---
+- name: rstudio | R web IDE
+  hosts: rstudio
+  roles:
+  - role: rstudio
+    tags:
+    - rstudio
+    - R
